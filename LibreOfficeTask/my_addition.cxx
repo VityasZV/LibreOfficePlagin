@@ -1,11 +1,10 @@
 #include <com/sun/star/lang/XMultiServiceFactory.hpp>
 #include <com/sun/star/lang/XMultiComponentFactory.hpp>
+
 #include <com/sun/star/frame/XComponentLoader.hpp>
 
 #include <com/sun/star/text/XTextDocument.hpp>
 #include <com/sun/star/text/XText.hpp>
-
-
 #include <com/sun/star/text/XTextTable.hpp>
 #include <com/sun/star/text/XTextTablesSupplier.hpp>
 #include <com/sun/star/text/XTextContent.hpp>
@@ -16,7 +15,6 @@
 #include <com/sun/star/table/XTable.hpp>
 
 #include <com/sun/star/frame/Desktop.hpp>
-
 
 #include <string>
 #include <algorithm>
@@ -50,7 +48,7 @@ void fillTable(Reference <XTextTable> table, int num_of_col, int num_of_row) {
             auto cell = table->getCellByName(OUString::createFromAscii(createName(x, y).c_str()));
             Reference<XText> cell_text(cell, UNO_QUERY);
             auto cell_val = [&x, &y](){
-                return "row_" + std::to_string(y) + " colm_" + std::to_string(x);
+                return "row=" + std::to_string(y) + "&column=" + std::to_string(x);
             }();
             cell_text->setString(OUString::createFromAscii(cell_val.c_str()));
         }
@@ -81,15 +79,12 @@ void newDocumentCreation(Reference<XComponentContext> xContext){
     size_t num_of_tables = std::rand() % 7 + 2;
     for (size_t i = 0; i < num_of_tables; i++) {
         auto text_cursor = text->createTextCursor();
-        std::string table_name = "\nTable: ";
-        table_name += std::to_string(i);
+        auto table_name = "\nTable: " + std::to_string(i);
         text_cursor->gotoEnd(false);
         text_cursor->setString(OUString::createFromAscii(table_name.c_str()));
         createTable(document, text);
     }
 }
-
-
 
 size_t maxSizeOfTable(Reference<XTextTable> table) {
     auto cursor = table->createCursorByCellName(OUString::createFromAscii("A1"));

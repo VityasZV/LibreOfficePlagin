@@ -3,11 +3,9 @@
 #include <com/sun/star/text/XTextDocument.hpp>
 #include <com/sun/star/text/XText.hpp>
 
-
 #include <com/sun/star/text/XTextTable.hpp>
 #include <com/sun/star/text/XTextContent.hpp>
 #include <com/sun/star/table/XCell.hpp>
-
 
 #include <string>
 #include <cstdlib>
