@@ -11,30 +11,28 @@
 #include "../Temperature/Temperature.h"
 #include "../Mutation/Mutation.h"
 #include "../Structures.h"
-
+#include <memory>
 
 template <class T, class S, class M>
 class Simulating {
 private:
     BaseSolution *best;
     BaseSolution *solution;
-    BaseMutation *result;
+    std::shared_ptr<BaseMutation> result;
     size_t it = 0;
-    Temperature *temp_module;
+    std::shared_ptr<Temperature> temp_module;
 public:
     Simulating(std::vector <size_t> data, size_t cores, size_t start_temp, BaseSolution *sol = nullptr) {
-        result = new M(data);
+        result = std::make_shared<M>(data);
         if (not sol)
             solution = result->InitSolution(cores);
         else
             solution = sol->GetCopy();
         best = solution->GetCopy();
-        temp_module = new T(start_temp);
+        temp_module = std::make_shared<T>(start_temp);
     }
     ~Simulating() {
-        delete(result);
         delete(solution);
-        delete(temp_module);
         delete(best);
     }
 
