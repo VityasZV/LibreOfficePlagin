@@ -20,48 +20,48 @@ struct InputDate{
 
 class SingleLoad {
 private:
-    std::vector <int> load;
+    std::vector<size_t> load;
 public:
     SingleLoad() = default;
 
-    SingleLoad(std::vector <int> data) {
+    SingleLoad(std::vector<size_t> data) {
         load.clear();
         load = data;
     }
 
-    std::vector <int> GetVec() {
+    auto GetVec() const -> std::vector<size_t> {
         return load;
     }
 
-    void Out() {
+    auto Out() -> void {
         for (auto& it: load) {
             std::cout << it << std::endl;
         }
     }
 
-    int GetLen() {
-        int current = 0;
+    auto GetLen() const -> size_t {
+        size_t current = 0;
         for (auto & it : load)
             current += it;
         return current;
     }
 
-    void Clear() {
+    auto Clear() -> void{
         load.clear();
     }
 
-    void WorkloadAdd(size_t size) {
+    auto WorkloadAdd(size_t size) -> void{
         load.emplace_back(size);
     }
 
-    int WorkloadRandomDelete() {
-        int position = rand() % load.size();
-        int command = load[position];
+    auto WorkloadRandomDelete() -> size_t {
+        size_t position = rand() % load.size();
+        size_t command = load[position];
         load.erase(load.begin() + position);
         return command;
     }
 
-    bool Empty() {
+    auto Empty() const -> bool {
         return load.empty();
     }
 
@@ -70,19 +70,19 @@ public:
 
 class BaseSolution{
 protected:
-    std::unordered_map <int, SingleLoad> global_loading;
+    std::unordered_map <size_t, SingleLoad> global_loading;
     size_t amount;
 public:
-    BaseSolution(int cores = 0) {
+    BaseSolution(size_t cores = 0) {
         amount=cores;
         for (size_t i=0; i<amount; i++)
             global_loading[i] = SingleLoad();
     }
 
-    BaseSolution(int cores, std::unordered_map<int, SingleLoad> loading) {
+    BaseSolution(size_t cores, const std::unordered_map<size_t, SingleLoad> &loading) {
         amount = cores;
         for (size_t i=0; i<amount; i++)
-            global_loading[i] = SingleLoad(loading[i].GetVec());
+            global_loading[i] = SingleLoad(loading.at(i).GetVec());
     }
 
     virtual void Insertation(int position, int size) = 0;
@@ -107,9 +107,9 @@ public:
 
 class Solution: public BaseSolution{
 public:
-    Solution(int cores = 0) : BaseSolution(cores) {};
+    Solution(size_t cores = 0) : BaseSolution(cores) {};
 
-    Solution(int cores, std::unordered_map<int, SingleLoad> loading) : BaseSolution(cores, loading) {};
+    Solution(size_t cores, std::unordered_map<size_t, SingleLoad> loading) : BaseSolution(cores, loading) {};
 
 
     virtual void Insertation(int position, int size) {
@@ -117,7 +117,7 @@ public:
     }
 
     virtual int CriterionGet() {
-        std::vector <int> loads_len;
+        std::vector<int> loads_len;
 
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());

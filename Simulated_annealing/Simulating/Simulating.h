@@ -18,9 +18,9 @@ class Simulating {
 private:
     BaseSolution *best;
     BaseSolution *solution;
-    BaseMutation *result; //NeedFix
+    BaseMutation *result;
     size_t it = 0;
-    Temperature *temp_module; //NeedFix
+    Temperature *temp_module;
 public:
     Simulating(std::vector <size_t> data, size_t cores, size_t start_temp, BaseSolution *sol = nullptr) {
         result = new M(data);
@@ -38,12 +38,9 @@ public:
         delete(best);
     }
 
-    BaseSolution* Solution_find() {
-
+    auto SolutionFind() -> BaseSolution*{
         while (it < 100) {
             double new_temp = temp_module->getTemp();
-//            std::cout << new_temp << "-----" << it <<std::endl;
-
             for (size_t i = 0; i < 10; i++) {
                 BaseSolution* tst = result->GetSolution(solution);
                 double diff = tst->CriterionGet() - solution->CriterionGet();
@@ -58,7 +55,6 @@ public:
                     }
                 } else {
                     float x = (rand() % 100) / (100 * 1.0);
-
                     if (exp(-diff / new_temp) > x) {
                         delete(solution);
                         solution = tst->GetCopy();

@@ -15,29 +15,25 @@ int main(int argc, char *argv[]) {
     srand( time(0));
     bool parallel;
     int th_am;
-    int mode = 0;
+    int mode;
     std::vector <int> inf = {1,2,4,6,8,10,12,14,16};
     std::cout << "Please select a working mode (0 - serial, 1 - parallel)" << std::endl;
     std::cin >> parallel;
     std::cout << "Choose temperature mode (0 - Boltzman, 1 - Cauchy, else Basic)" << std::endl;
     std::cin >> mode;
-//    mode = 1;
-//    parallel = true;
-
-
     InputDate date = ReadCSV();
 
     auto start_time = std::chrono::high_resolution_clock::now();
     if (not parallel) {
         if (mode == 0) {
             Simulating<Boltzman, Solution, Mutation> sim(date.data, date.proc_num, 100);
-            sim.Solution_find()->PrintResults();
+            sim.SolutionFind()->PrintResults();
         } else if (mode == 1) {
             Simulating<Cauchy, Solution, Mutation> sim(date.data, date.proc_num, 100);
-            sim.Solution_find()->PrintResults();
+            sim.SolutionFind()->PrintResults();
         } else {
             Simulating<Basic, Solution, Mutation> sim(date.data, date.proc_num, 100);
-            sim.Solution_find()->PrintResults();
+            sim.SolutionFind()->PrintResults();
         }
     } else {
         std::cout << "Please, print amoint of threads:" << std::endl;

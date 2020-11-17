@@ -12,11 +12,11 @@
 template <class T, class S, class M>
 class ParallelSimulating{
 private:
-    int num_procs;
-    int temp;
-    int cores_amount;
-    std::vector <size_t> inform;
-    std::vector <BaseSolution*> worktask;
+    size_t num_procs;
+    size_t temp;
+    size_t cores_amount;
+    std::vector<size_t> inform;
+    std::vector<BaseSolution*> worktask;
     std::mutex writelock;
 
 public:
@@ -25,7 +25,7 @@ public:
 
     void InitWorkTask(BaseSolution* best){
         Simulating<T,S,M> sim(inform, cores_amount, temp, best);
-        BaseSolution* sol = sim.Solution_find()->GetCopy();
+        BaseSolution* sol = sim.SolutionFind()->GetCopy();
         writelock.lock();
         worktask.emplace_back(sol);
         writelock.unlock();
@@ -35,11 +35,9 @@ public:
         std::vector<std::thread> thread_vec(num_procs);
         BaseSolution* best = nullptr;
         int it=0;
-
         while (it<10) {
             for (size_t i = 0; i < num_procs; i++)
                 thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this, best);
-
             for (auto &th: thread_vec)
                 if (th.joinable())
                     th.join();
@@ -63,7 +61,6 @@ public:
             worktask.clear();
         }
         return best;
-
     }
 
 
