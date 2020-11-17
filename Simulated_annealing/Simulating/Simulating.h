@@ -22,7 +22,7 @@ private:
     size_t it = 0;
     Temperature *temp_module; //NeedFix
 public:
-    Simulating(std::vector <int> data, int cores, int start_temp, BaseSolution *sol = nullptr) {
+    Simulating(std::vector <size_t> data, size_t cores, size_t start_temp, BaseSolution *sol = nullptr) {
         result = new M(data);
         if (not sol)
             solution = result->InitSolution(cores);

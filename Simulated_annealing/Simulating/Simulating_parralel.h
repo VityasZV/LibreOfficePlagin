@@ -15,12 +15,12 @@ private:
     int num_procs;
     int temp;
     int cores_amount;
-    std::vector <int> inform;
+    std::vector <size_t> inform;
     std::vector <BaseSolution*> worktask;
     std::mutex writelock;
 
 public:
-    ParallelSimulating(int procs, std::vector <int> data, int cores, int start_temp): num_procs(procs),
+    ParallelSimulating(size_t procs, std::vector<size_t> data, size_t cores, size_t start_temp): num_procs(procs),
         temp(start_temp), cores_amount(cores), inform(data) {}
 
     void InitWorkTask(BaseSolution* best){

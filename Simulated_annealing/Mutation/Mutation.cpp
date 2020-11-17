@@ -3,22 +3,17 @@
 #include <random>
 
 
-
-
-Solution* Mutation::InitSolution(int cores) {
+Solution* Mutation::InitSolution(size_t cores) {
     Solution *new_solution = new Solution(cores);
-
     for (auto &it: input)
         new_solution->Insertation(0, it);
-
-
     return new_solution;
 }
 
 BaseSolution* Mutation::GetSolution(BaseSolution *solution) {
     BaseSolution* new_sol = solution->GetCopy();
-    int pos;
-    int new_pos;
+    size_t pos;
+    size_t new_pos;
     do {
         pos = rand() % new_sol->CoresAmount();
     } while (new_sol->EmptyLine(pos));
@@ -26,8 +21,6 @@ BaseSolution* Mutation::GetSolution(BaseSolution *solution) {
     do {
         new_pos = rand() % new_sol->CoresAmount();
     } while (pos == new_pos);
-
     new_sol->Insertation(new_pos, command);
-
     return new_sol;
 }

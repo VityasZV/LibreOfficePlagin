@@ -12,13 +12,13 @@
 
 class BaseMutation {
 protected:
-    std::vector <int> input;
+    std::vector <size_t> input;
 public:
-    BaseMutation(std::vector <int> input_data = {}) {
+    BaseMutation(std::vector<size_t> input_data = {}) {
         input = input_data;
     }
 
-    virtual Solution* InitSolution(int cores) = 0;
+    virtual Solution* InitSolution(size_t cores) = 0;
 
     virtual BaseSolution* GetSolution(BaseSolution *solution) = 0;
 
@@ -26,16 +26,14 @@ public:
 };
 
 
-
-
 class Mutation : public BaseMutation {
 
 public:
-    Mutation(std::vector <int> input_data = {}) : BaseMutation(input_data) {}
+    Mutation(std::vector <size_t> input_data = {}) : BaseMutation(input_data) {}
 
     virtual BaseSolution* GetSolution(BaseSolution *solution);
 
-    virtual Solution* InitSolution(int cores);
+    virtual Solution* InitSolution(size_t cores);
 };
 
 #endif //SIMULATED_ANNEALING_MUTATION_H
