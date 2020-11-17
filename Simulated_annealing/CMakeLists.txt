@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.8)
+
+project(Simulated_annealing)
+
+include(CheckCXXCompilerFlag)
+
+
+set(CMAKE_CXX_STANDARD 20)
+
+function(enable_cxx_compiler_flag_if_supported flag)
+    string(FIND "${CMAKE_CXX_FLAGS}" "${flag}" flag_already_set)
+    if(flag_already_set EQUAL -1)
+        check_cxx_compiler_flag("${flag}" flag_supported)
+        if(flag_supported)
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${flag}" PARENT_SCOPE)
+        endif()
+        unset(flag_supported CACHE)
+    endif()
+endfunction()
+
+enable_cxx_compiler_flag_if_supported("-Wall")
+enable_cxx_compiler_flag_if_supported("-std=c++17")
+enable_cxx_compiler_flag_if_supported("-pthread")
+enable_cxx_compiler_flag_if_supported("-O3")
+
+#include_directories(Mutation)
+#include_directories(Temperature)
+
+file(GLOB SOURCES Temperature/*.cpp Simulating/*.cpp Mutation/*.cpp Generator/*.cpp)
+add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
+add_executable(Gener Generator.cpp Generator/Generator_csv.cpp)
+#add_executable(${PROJECT_NAME} main.cpp Temperature/Temperature.cpp Mutation/Mutation.cpp main.cpp Structures.h Temperature/Temperature.h Mutation/Mutation.h Simulating/Simulating.h Simulating/Simulating_parralel.h Generator/Generator_csv.cpp Generator/Generator_csv.h)
