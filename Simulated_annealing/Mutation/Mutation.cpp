@@ -3,14 +3,14 @@
 #include <random>
 
 
-Solution* Mutation::InitSolution(size_t cores) {
+auto Mutation::InitSolution(size_t cores) -> Solution* {
     Solution *new_solution = new Solution(cores);
     for (auto &it: input)
         new_solution->Insertation(0, it);
     return new_solution;
 }
 
-BaseSolution* Mutation::GetSolution(BaseSolution *solution) {
+auto Mutation::GetSolution(BaseSolution *solution) -> BaseSolution* {
     BaseSolution* new_sol = solution->GetCopy();
     size_t pos;
     size_t new_pos;

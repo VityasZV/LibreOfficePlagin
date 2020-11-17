@@ -85,20 +85,20 @@ public:
             global_loading[i] = SingleLoad(loading.at(i).GetVec());
     }
 
-    virtual void Insertation(int position, int size) = 0;
+    auto virtual  Insertation(int position, int size) -> void = 0;
 
 
-    virtual int CriterionGet() = 0;
+    auto virtual CriterionGet() -> int = 0;
 
-    virtual int CoresAmount() = 0;
+    auto virtual CoresAmount() -> int = 0;
 
-    virtual int RandomPositions(int position) = 0;
+    auto virtual RandomPositions(int position) -> int = 0;
 
-    virtual bool EmptyLine(int position) = 0;
+    auto virtual EmptyLine(int position) -> bool = 0;
 
-    virtual void PrintResults() = 0;
+    auto virtual PrintResults() -> void = 0;
 
-    virtual  BaseSolution* GetCopy() = 0;
+    auto virtual GetCopy() -> BaseSolution* = 0;
 
     virtual ~BaseSolution() = default;
 
@@ -112,11 +112,11 @@ public:
     Solution(size_t cores, std::unordered_map<size_t, SingleLoad> loading) : BaseSolution(cores, loading) {};
 
 
-    virtual void Insertation(int position, int size) {
+    auto virtual Insertation(int position, int size) -> void override {
         global_loading[position].WorkloadAdd(size);
     }
 
-    virtual int CriterionGet() {
+    auto virtual CriterionGet() -> int override {
         std::vector<int> loads_len;
 
         for (size_t i=0;  i<amount; i++)
@@ -124,20 +124,20 @@ public:
         return *max_element(loads_len.begin(), loads_len.end()) - *min_element(loads_len.begin(), loads_len.end());
     }
 
-    virtual int CoresAmount() {
+    auto virtual CoresAmount() -> int override {
         return amount;
     }
 
-    virtual int RandomPositions(int position) {
+    auto virtual RandomPositions(int position) -> int override{
         return global_loading[position].WorkloadRandomDelete();
 
     }
 
-    virtual bool EmptyLine(int position) {
+    auto virtual  EmptyLine(int position) -> bool override {
         return global_loading[position].Empty();
     }
 
-    virtual void PrintResults() {
+    auto virtual  PrintResults() -> void override {
         std::cout << "Answer:" << std::endl;
         for (size_t i=0; i<amount; i++) {
             std::cout << "Proc №"<< i << " --- " << global_loading[i].GetLen() << std::endl;
@@ -145,7 +145,7 @@ public:
         std::cout << "Deviation - " << this->CriterionGet() << std::endl;
     }
 
-    virtual BaseSolution* GetCopy() {
+    auto virtual  GetCopy() -> BaseSolution* override {
         Solution *copy = new Solution(amount, global_loading);
         return copy;
     }

@@ -18,9 +18,9 @@ public:
         input = input_data;
     }
 
-    virtual Solution* InitSolution(size_t cores) = 0;
+    auto virtual InitSolution(size_t cores) -> Solution* = 0;
 
-    virtual BaseSolution* GetSolution(BaseSolution *solution) = 0;
+    auto virtual GetSolution(BaseSolution *solution) -> BaseSolution* = 0;
 
     virtual ~BaseMutation() = default;
 };
@@ -31,9 +31,9 @@ class Mutation : public BaseMutation {
 public:
     Mutation(std::vector <size_t> input_data = {}) : BaseMutation(input_data) {}
 
-    virtual BaseSolution* GetSolution(BaseSolution *solution);
+    auto virtual GetSolution(BaseSolution *solution) -> BaseSolution* override;
 
-    virtual Solution* InitSolution(size_t cores);
+    auto virtual InitSolution(size_t cores) -> Solution* override;
 };
 
 #endif //SIMULATED_ANNEALING_MUTATION_H
