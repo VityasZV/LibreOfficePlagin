@@ -98,7 +98,7 @@ public:
 
     auto virtual PrintResults() -> void = 0;
 
-    auto virtual GetCopy() -> BaseSolution* = 0;
+    auto virtual GetCopy() -> std::shared_ptr<BaseSolution> = 0;
 
     virtual ~BaseSolution() = default;
 
@@ -145,8 +145,8 @@ public:
         std::cout << "Deviation - " << this->CriterionGet() << std::endl;
     }
 
-    auto virtual  GetCopy() -> BaseSolution* override {
-        Solution *copy = new Solution(amount, global_loading);
+    auto virtual GetCopy() -> std::shared_ptr<BaseSolution> override {
+        auto copy = std::make_shared<Solution>(amount, global_loading);
         return copy;
     }
 };

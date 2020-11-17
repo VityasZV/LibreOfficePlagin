@@ -16,24 +16,24 @@ private:
     size_t temp;
     size_t cores_amount;
     std::vector<size_t> inform;
-    std::vector<BaseSolution*> worktask;
+    std::vector<std::shared_ptr<BaseSolution>> worktask;
     std::mutex writelock;
 
 public:
     ParallelSimulating(size_t procs, std::vector<size_t> data, size_t cores, size_t start_temp): num_procs(procs),
         temp(start_temp), cores_amount(cores), inform(data) {}
 
-    void InitWorkTask(BaseSolution* best){
+    void InitWorkTask(std::shared_ptr<BaseSolution> best){
         Simulating<T,S,M> sim(inform, cores_amount, temp, best);
-        BaseSolution* sol = sim.SolutionFind()->GetCopy();
+        auto sol = sim.SolutionFind()->GetCopy();
         writelock.lock();
         worktask.emplace_back(sol);
         writelock.unlock();
     };
 
-    BaseSolution* ParralelSolution() {
+    std::shared_ptr<BaseSolution> ParralelSolution() {
         std::vector<std::thread> thread_vec(num_procs);
-        BaseSolution* best = nullptr;
+        std::shared_ptr<BaseSolution> best = nullptr;
         int it=0;
         while (it<10) {
             for (size_t i = 0; i < num_procs; i++)
@@ -42,14 +42,11 @@ public:
                 if (th.joinable())
                     th.join();
             if (best) {
-                BaseSolution* new_solution = this->GetBestSolution();
+                auto new_solution = this->GetBestSolution();
                 if (new_solution->CriterionGet() < best->CriterionGet()) {
-                    delete (best);
                     best = new_solution->GetCopy();
-                    delete (new_solution);
                     it = 0;
                 } else {
-                    delete(new_solution);
                     it++;
                 }
             } else {
@@ -65,9 +62,9 @@ public:
 
 
 
-    BaseSolution* GetBestSolution() {
+    std::shared_ptr<BaseSolution> GetBestSolution() {
         std::vector <int> allcrit;
-        BaseSolution* tst = nullptr;
+        std::shared_ptr<BaseSolution> tst = nullptr;
         for (auto &it: worktask)
             allcrit.emplace_back(it->CriterionGet());
 
@@ -75,7 +72,6 @@ public:
         for (auto it: worktask) {
             if (it->CriterionGet() == max)
                 tst = it->GetCopy();
-            delete(it);
         }
         return tst;
     }

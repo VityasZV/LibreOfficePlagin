@@ -16,13 +16,13 @@
 template <class T, class S, class M>
 class Simulating {
 private:
-    BaseSolution *best;
-    BaseSolution *solution;
+    std::shared_ptr<BaseSolution> best;
+    std::shared_ptr<BaseSolution> solution;
     std::shared_ptr<BaseMutation> result;
     size_t it = 0;
     std::shared_ptr<Temperature> temp_module;
 public:
-    Simulating(std::vector <size_t> data, size_t cores, size_t start_temp, BaseSolution *sol = nullptr) {
+    Simulating(std::vector<size_t> data, size_t cores, size_t start_temp, std::shared_ptr<BaseSolution> sol = nullptr) {
         result = std::make_shared<M>(data);
         if (not sol)
             solution = result->InitSolution(cores);
@@ -32,37 +32,30 @@ public:
         temp_module = std::make_shared<T>(start_temp);
     }
     ~Simulating() {
-        delete(solution);
-        delete(best);
     }
 
-    auto SolutionFind() -> BaseSolution*{
+    auto SolutionFind() -> std::shared_ptr<BaseSolution> {
         while (it < 100) {
             double new_temp = temp_module->getTemp();
             for (size_t i = 0; i < 10; i++) {
-                BaseSolution* tst = result->GetSolution(solution);
+                auto tst = result->GetSolution(solution);
                 double diff = tst->CriterionGet() - solution->CriterionGet();
 
                 if (diff < 0) {
-                    delete(solution);
                     solution = tst->GetCopy();
                     if (solution->CriterionGet() < best->CriterionGet()) {
                         it=0;
-                        delete(best);
                         best = solution->GetCopy();
                     }
                 } else {
                     float x = (rand() % 100) / (100 * 1.0);
                     if (exp(-diff / new_temp) > x) {
-                        delete(solution);
                         solution = tst->GetCopy();
                     }
 
                 }
-                delete(tst);
             }
             it++;
-            delete(solution);
             solution = best->GetCopy();
         }
         return best;
