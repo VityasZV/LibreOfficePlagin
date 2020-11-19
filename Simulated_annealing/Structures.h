@@ -42,6 +42,12 @@ public:
         return current;
     }
 
+    auto ShowElements() const -> void  {
+        for (auto &it : load) {
+            std::cout << it << " ";
+        }
+    }
+
     auto Clear() -> void{
         load.clear();
     }
@@ -114,7 +120,6 @@ public:
 
     auto virtual CriterionGet() -> int override {
         std::vector<int> loads_len;
-
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());
         return *max_element(loads_len.begin(), loads_len.end()) - *min_element(loads_len.begin(), loads_len.end());
@@ -136,9 +141,12 @@ public:
     auto virtual  PrintResults() -> void override {
         std::cout << "Answer:" << std::endl;
         for (size_t i=0; i<amount; i++) {
-            std::cout << "Proc №"<< i << " --- " << global_loading[i].GetLen() << std::endl;
+            std::cout << "Process №"<< i << ": " << global_loading[i].GetLen() << std::endl;
+//            std::cout << "Proc №" << i << " ";
+//            global_loading[i].ShowElements();
+//            std::cout << std::endl;
         }
-        std::cout << "Deviation - " << this->CriterionGet() << std::endl;
+        std::cout << "Deviation: " << this->CriterionGet() << std::endl;
     }
 
     auto virtual GetCopy() -> std::shared_ptr<BaseSolution> override {

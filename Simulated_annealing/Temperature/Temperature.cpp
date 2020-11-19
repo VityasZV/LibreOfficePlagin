@@ -12,7 +12,7 @@ double Cauchy::getTemp() {
     return temp/(1+it);
 }
 
-double Basic::getTemp() {
+double Mixed::getTemp() {
     it++;
     return temp * log(1+it)/(1+it);
 }

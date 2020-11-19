@@ -22,7 +22,7 @@ InputDate ReadCSV() {
     std::string line;
     size_t delimeter;
     InputDate Result;
-    input_date.open("../input.csv");
+    input_date.open("input.csv");
     getline(input_date, line);
     delimeter = line.find(",");
     Result.proc_num = std::stoi(line.substr(0,delimeter+1));

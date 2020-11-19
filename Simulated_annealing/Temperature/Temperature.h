@@ -31,10 +31,10 @@ public:
     virtual double getTemp();
 };
 
-class Basic: public Temperature
+class Mixed: public Temperature //заменить на смешанный mixed
 {
 public:
-    Basic(double temp=0): Temperature(temp) {}
+    Mixed(double temp=0): Temperature(temp) {}
 
     virtual double getTemp();
 };

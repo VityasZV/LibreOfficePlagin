@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     std::vector <int> inf = {1,2,4,6,8,10,12,14,16};
     std::cout << "Please select a working mode (0 - serial, 1 - parallel)" << std::endl;
     std::cin >> parallel;
-    std::cout << "Choose temperature mode (0 - Boltzman, 1 - Cauchy, else Basic)" << std::endl;
+    std::cout << "Choose temperature mode (0 - Boltzman, 1 - Cauchy, else Mixed)" << std::endl;
     std::cin >> mode;
     InputDate date = ReadCSV();
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
             Simulating<Cauchy, Solution, Mutation> sim(date.data, date.proc_num, 100);
             sim.SolutionFind()->PrintResults();
         } else {
-            Simulating<Basic, Solution, Mutation> sim(date.data, date.proc_num, 100);
+            Simulating<Mixed, Solution, Mutation> sim(date.data, date.proc_num, 100);
             sim.SolutionFind()->PrintResults();
         }
     } else {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
             ParallelSimulating<Cauchy, Solution, Mutation> sim1(th_am, date.data, date.proc_num, 100);
             sim1.ParralelSolution()->PrintResults();
         } else {
-            ParallelSimulating<Basic, Solution, Mutation> sim1(th_am, date.data, date.proc_num, 100);
+            ParallelSimulating<Mixed, Solution, Mutation> sim1(th_am, date.data, date.proc_num, 100);
             sim1.ParralelSolution()->PrintResults();
         }
 

@@ -36,7 +36,6 @@ public:
             for (size_t i = 0; i < 10; i++) {
                 auto tst = result->GetSolution(solution);
                 double diff = tst->CriterionGet() - solution->CriterionGet();
-
                 if (diff < 0) {
                     solution = tst->GetCopy();
                     if (solution->CriterionGet() < best->CriterionGet()) {
@@ -48,7 +47,6 @@ public:
                     if (exp(-diff / new_temp) > x) {
                         solution = tst->GetCopy();
                     }
-
                 }
             }
             it++;
