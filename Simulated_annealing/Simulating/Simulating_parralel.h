@@ -1,7 +1,3 @@
-//
-// Created by voland on 11.11.2020.
-//
-
 #ifndef SIMULATED_ANNEALING_SIMULATING_PARRALEL_H
 #define SIMULATED_ANNEALING_SIMULATING_PARRALEL_H
 #include "Simulating.h"
@@ -59,7 +55,6 @@ public:
         }
         return best;
     }
-
 
 
     std::shared_ptr<BaseSolution> GetBestSolution() {

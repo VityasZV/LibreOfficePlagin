@@ -1,6 +1,3 @@
-//
-// Created by voland on 09.11.2020.
-//
 #include <math.h>
 #include "Temperature.h"
 

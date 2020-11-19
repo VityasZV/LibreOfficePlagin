@@ -1,7 +1,3 @@
-//
-// Created by voland on 09.11.2020.
-//
-
 #ifndef SIMULATED_ANNEALING_STRUCTURES_H
 #define SIMULATED_ANNEALING_STRUCTURES_H
 

@@ -1,7 +1,3 @@
-//
-// Created by voland on 10.11.2020.
-//
-
 #ifndef SIMULATED_ANNEALING_MUTATION_H
 #define SIMULATED_ANNEALING_MUTATION_H
 

@@ -1,13 +1,5 @@
-//
-// Created by voland on 10.11.2020.
-//
-
 #ifndef SIMULATED_ANNEALING_TEMPERATURE_H
 #define SIMULATED_ANNEALING_TEMPERATURE_H
-
-//
-// Created by voland on 09.11.2020.
-//
 #include <math.h>
 
 class Temperature
