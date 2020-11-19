@@ -6,7 +6,8 @@
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
-#include <boost/bimap.hpp>
+#include <map>
+#include <memory>
 
 enum class WorkMode {
     Serial,
@@ -16,30 +17,30 @@ enum class WorkMode {
 enum class TemperatureMode {
     Boltzman,
     Cauchy,
-    Mixed;
+    Mixed
 };
 
 static auto IntToWorkMode = []() {
-    std::vector<boost::bimap<int, WorkMode>::value_type> values{
-            boost::bimap<int, WorkMode>::value_type(0, WorkMode::Serial),
-            boost::bimap<int, WorkMode>::value_type(1, WorkMode::Parallel),
+    std::vector<std::map<int, WorkMode>::value_type> values{
+            std::map<int, WorkMode>::value_type(0, WorkMode::Serial),
+            std::map<int, WorkMode>::value_type(1, WorkMode::Parallel),
     };
-    return boost::bimap<int, WorkMode>(values.begin(), values.end());
+    return std::map<int, WorkMode>(values.begin(), values.end());
 }();
 
 static auto IntToTemperatureMode = []() {
-    std::vector<boost::bimap<int, TemperatureMode>::value_type> values{
-            boost::bimap<int, TemperatureMode>::value_type(0, TemperatureMode::Boltzman),
-            boost::bimap<int, TemperatureMode>::value_type(1, TemperatureMode::Cauchy),
-            boost::bimap<int, TemperatureMode>::value_type(2, TemperatureMode::Mixed),
+    std::vector<std::map<int, TemperatureMode>::value_type> values{
+            std::map<int, TemperatureMode>::value_type(0, TemperatureMode::Boltzman),
+            std::map<int, TemperatureMode>::value_type(1, TemperatureMode::Cauchy),
+            std::map<int, TemperatureMode>::value_type(2, TemperatureMode::Mixed),
     };
-    return boost::bimap<int, WorkMode>(values.begin(), values.end());
+    return std::map<int, TemperatureMode>(values.begin(), values.end());
 }();
 
 
-struct InputDate{
-    size_t proc_num = 0;
-    size_t work_amount = 0;
+struct InputData{
+    size_t number_of_processors = 0;
+    size_t number_of_works = 0;
     std::vector <size_t> data = {};
 };
 
@@ -119,7 +120,7 @@ public:
     auto virtual  Insertation(int position, int size) -> void = 0;
 
 
-    auto virtual CriterionGet() -> int = 0;
+    auto virtual GetCriterion() -> int = 0;
 
     auto virtual CoresAmount() -> int = 0;
 
@@ -147,7 +148,7 @@ public:
         global_loading[position].WorkloadAdd(size);
     }
 
-    auto virtual CriterionGet() -> int override {
+    auto virtual GetCriterion() -> int override {
         std::vector<int> loads_len;
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());
@@ -158,24 +159,22 @@ public:
         return amount;
     }
 
-    auto virtual RandomPositions(int position) -> int override{
+    auto virtual RandomPositions(int position) -> int override {
         return global_loading[position].WorkloadRandomDelete();
-
     }
 
-    auto virtual  EmptyLine(int position) -> bool override {
+    auto virtual EmptyLine(int position) -> bool override {
         return global_loading[position].Empty();
     }
 
     auto virtual  PrintResults() -> void override {
         std::cout << "Answer:" << std::endl;
         for (size_t i=0; i<amount; i++) {
-            std::cout << "Process №"<< i << ": " << global_loading[i].GetLen() << std::endl;
-//            std::cout << "Proc №" << i << " ";
-//            global_loading[i].ShowElements();
-//            std::cout << std::endl;
+            std::cout << "Process №"<< i << ": " << "Time=" << global_loading[i].GetLen() << " Works:";
+            global_loading[i].ShowElements();
+            std::cout << std::endl;
         }
-        std::cout << "Deviation: " << this->CriterionGet() << std::endl;
+        std::cout << "Deviation: " << this->GetCriterion() << std::endl;
     }
 
     auto virtual GetCopy() -> std::shared_ptr<BaseSolution> override {

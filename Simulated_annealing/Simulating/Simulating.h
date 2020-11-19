@@ -35,10 +35,10 @@ public:
             double new_temp = temp_module->getTemp();
             for (size_t i = 0; i < 10; i++) {
                 auto tst = result->GetSolution(solution);
-                double diff = tst->CriterionGet() - solution->CriterionGet();
+                double diff = tst->GetCriterion() - solution->GetCriterion();
                 if (diff < 0) {
                     solution = tst->GetCopy();
-                    if (solution->CriterionGet() < best->CriterionGet()) {
+                    if (solution->GetCriterion() < best->GetCriterion()) {
                         it=0;
                         best = solution->GetCopy();
                     }

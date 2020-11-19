@@ -5,9 +5,9 @@ project(Simulated_annealing)
 include(CheckCXXCompilerFlag)
 
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
-find_package(Boost 1.72.0 REQUIRED)
+find_package(Boost 1.65.0 REQUIRED)
 
 function(enable_cxx_compiler_flag_if_supported flag)
     string(FIND "${CMAKE_CXX_FLAGS}" "${flag}" flag_already_set)

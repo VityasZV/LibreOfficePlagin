@@ -3,7 +3,7 @@
 #include <iostream>
 #include "../Structures.h"
 
-void GenerateCSV(int proc_num, int work_amount, std::pair<int, int> time_interval);
-InputDate ReadCSV();
+void GenerateCSV(size_t number_of_processors, size_t number_of_works, std::pair<int, int> time_interval);
+InputData ReadCSV();
 
 #endif //SIMULATED_ANNEALING_GENERATOR_CSV_H

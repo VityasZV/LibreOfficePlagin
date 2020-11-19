@@ -1,14 +1,14 @@
 #ifndef SIMULATED_ANNEALING_SIMULATING_PARRALEL_H
 #define SIMULATED_ANNEALING_SIMULATING_PARRALEL_H
 #include "Simulating.h"
-#include <thread>
 #include <mutex>
+#include <future>
 
 
 template <class T, class S, class M>
 class ParallelSimulating{
 private:
-    size_t num_procs;
+    size_t processors_amount;
     size_t temp;
     size_t cores_amount;
     std::vector<size_t> inform;
@@ -16,30 +16,31 @@ private:
     std::mutex writelock;
 
 public:
-    ParallelSimulating(size_t procs, std::vector<size_t> data, size_t cores, size_t start_temp): num_procs(procs),
+    ParallelSimulating(size_t procs, std::vector<size_t> data, size_t cores, size_t start_temp): processors_amount(procs),
         temp(start_temp), cores_amount(cores), inform(data) {}
 
     void InitWorkTask(std::shared_ptr<BaseSolution> best){
         Simulating<T,S,M> sim(inform, cores_amount, temp, best);
         auto sol = sim.SolutionFind()->GetCopy();
-        writelock.lock();
+        std::lock_guard<std::mutex> lk(writelock);
         worktask.emplace_back(sol);
-        writelock.unlock();
     };
 
     std::shared_ptr<BaseSolution> ParralelSolution() {
-        std::vector<std::thread> thread_vec(num_procs);
+        std::vector<std::future<void>> tasks(processors_amount);
+
         std::shared_ptr<BaseSolution> best = nullptr;
         int it=0;
         while (it<10) {
-            for (size_t i = 0; i < num_procs; i++)
-                thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this, best);
-            for (auto &th: thread_vec)
-                if (th.joinable())
-                    th.join();
+            for (size_t i = 0; i < processors_amount; i++)
+                tasks[i] = std::async(std::launch::async, [&best, this](){
+                    this->InitWorkTask(best);
+                });
+            for (auto &task: tasks)
+                task.get();
             if (best) {
                 auto new_solution = this->GetBestSolution();
-                if (new_solution->CriterionGet() < best->CriterionGet()) {
+                if (new_solution->GetCriterion() < best->GetCriterion()) {
                     best = new_solution->GetCopy();
                     it = 0;
                 } else {
@@ -49,8 +50,8 @@ public:
                 best = this->GetBestSolution()->GetCopy();
                 it=1;
             }
-            thread_vec.clear();
-            thread_vec.resize(num_procs);
+            tasks.clear();
+            tasks.resize(processors_amount);
             worktask.clear();
         }
         return best;
@@ -61,11 +62,11 @@ public:
         std::vector <int> allcrit;
         std::shared_ptr<BaseSolution> tst = nullptr;
         for (auto &it: worktask)
-            allcrit.emplace_back(it->CriterionGet());
+            allcrit.emplace_back(it->GetCriterion());
 
         int max = *std::max_element(allcrit.begin(), allcrit.end());
         for (auto it: worktask) {
-            if (it->CriterionGet() == max)
+            if (it->GetCriterion() == max)
                 tst = it->GetCopy();
         }
         return tst;
