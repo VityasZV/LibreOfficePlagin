@@ -6,6 +6,35 @@
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
+#include <boost/bimap.hpp>
+
+enum class WorkMode {
+    Serial,
+    Parallel
+};
+
+enum class TemperatureMode {
+    Boltzman,
+    Cauchy,
+    Mixed;
+};
+
+static auto IntToWorkMode = []() {
+    std::vector<boost::bimap<int, WorkMode>::value_type> values{
+            boost::bimap<int, WorkMode>::value_type(0, WorkMode::Serial),
+            boost::bimap<int, WorkMode>::value_type(1, WorkMode::Parallel),
+    };
+    return boost::bimap<int, WorkMode>(values.begin(), values.end());
+}();
+
+static auto IntToTemperatureMode = []() {
+    std::vector<boost::bimap<int, TemperatureMode>::value_type> values{
+            boost::bimap<int, TemperatureMode>::value_type(0, TemperatureMode::Boltzman),
+            boost::bimap<int, TemperatureMode>::value_type(1, TemperatureMode::Cauchy),
+            boost::bimap<int, TemperatureMode>::value_type(2, TemperatureMode::Mixed),
+    };
+    return boost::bimap<int, WorkMode>(values.begin(), values.end());
+}();
 
 
 struct InputDate{
