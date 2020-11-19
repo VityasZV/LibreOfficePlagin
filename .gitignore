@@ -34,5 +34,5 @@
 
 .idea/
 .vscode/
-Simulated_annealing/build
-Simulated_annealing/cmake-build-debug
+SimulatedAnnealing/build
+SimulatedAnnealing/cmake-build-debug

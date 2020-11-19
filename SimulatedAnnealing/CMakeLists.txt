@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project(Simulated_annealing)
+project(SimulatedAnnealing)
 
 include(CheckCXXCompilerFlag)
 

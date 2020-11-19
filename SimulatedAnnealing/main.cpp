@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         std::cout << "Select a working temperature_mode (0 - serial, 1 - work_mode)" << std::endl;
         int int_work_mode, int_temperature_mode;
         std::cin >> int_work_mode;
-        std::cout << "Choose a temperature mode (0 - Boltzman, 1 - Cauchy, else Mixed)" << std::endl;
+        std::cout << "Choose a temperature mode (0 - Boltzman, 1 - Cauchy, 2 - Mixed)" << std::endl;
         std::cin >> int_temperature_mode;
         auto work_mode = IntToWorkMode[int_work_mode];
         auto temperature_mode = IntToTemperatureMode[int_temperature_mode];
