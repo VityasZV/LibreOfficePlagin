@@ -123,6 +123,19 @@ Functions/fast:
 	$(MAKE) -f CMakeFiles/Functions.dir/build.make CMakeFiles/Functions.dir/build
 .PHONY : Functions/fast
 
+#=============================================================================
+# Target rules for targets named Gtests
+
+# Build rule for target.
+Gtests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Gtests
+.PHONY : Gtests
+
+# fast build rule for target.
+Gtests/fast:
+	$(MAKE) -f Google_tests/CMakeFiles/Gtests.dir/build.make Google_tests/CMakeFiles/Gtests.dir/build
+.PHONY : Gtests/fast
+
 ArithmeticFuncs/Diff.o: ArithmeticFuncs/Diff.cpp.o
 
 .PHONY : ArithmeticFuncs/Diff.o
@@ -348,6 +361,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Functions"
 	@echo "... edit_cache"
+	@echo "... Gtests"
 	@echo "... ArithmeticFuncs/Diff.o"
 	@echo "... ArithmeticFuncs/Diff.i"
 	@echo "... ArithmeticFuncs/Diff.s"

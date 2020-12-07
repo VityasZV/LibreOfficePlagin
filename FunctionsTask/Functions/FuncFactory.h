@@ -40,7 +40,7 @@ private:
     void registerAll() {
         registered["ident"] = std::make_shared<Creator<IdentityFunc>>();
         registered["const"] = std::make_shared<Creator<ConstantFunc>>();
-        registered["poly"]  = std::make_shared<Creator<PolynomFunc>>();
+        registered["polynomial"]  = std::make_shared<Creator<PolynomFunc>>();
         registered["power"] = std::make_shared<Creator<PowerFunc>>();
         registered["exp"]   = std::make_shared<Creator<ExponentFunc>>();
     }

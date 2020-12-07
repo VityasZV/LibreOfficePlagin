@@ -97,6 +97,61 @@ clean: CMakeFiles/Functions.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory Google_tests
+
+# Convenience name for "all" pass in the directory.
+Google_tests/all: Google_tests/CMakeFiles/Gtests.dir/all
+
+.PHONY : Google_tests/all
+
+# Convenience name for "clean" pass in the directory.
+Google_tests/clean: Google_tests/CMakeFiles/Gtests.dir/clean
+
+.PHONY : Google_tests/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Google_tests/preinstall:
+
+.PHONY : Google_tests/preinstall
+
+#=============================================================================
+# Target rules for target Google_tests/CMakeFiles/Gtests.dir
+
+# All Build rule for target.
+Google_tests/CMakeFiles/Gtests.dir/all:
+	$(MAKE) -f Google_tests/CMakeFiles/Gtests.dir/build.make Google_tests/CMakeFiles/Gtests.dir/depend
+	$(MAKE) -f Google_tests/CMakeFiles/Gtests.dir/build.make Google_tests/CMakeFiles/Gtests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20 "Built target Gtests"
+.PHONY : Google_tests/CMakeFiles/Gtests.dir/all
+
+# Include target in all.
+all: Google_tests/CMakeFiles/Gtests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Google_tests/CMakeFiles/Gtests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/CMakeFiles/Gtests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles 0
+.PHONY : Google_tests/CMakeFiles/Gtests.dir/rule
+
+# Convenience name for target.
+Gtests: Google_tests/CMakeFiles/Gtests.dir/rule
+
+.PHONY : Gtests
+
+# clean rule for target.
+Google_tests/CMakeFiles/Gtests.dir/clean:
+	$(MAKE) -f Google_tests/CMakeFiles/Gtests.dir/build.make Google_tests/CMakeFiles/Gtests.dir/clean
+.PHONY : Google_tests/CMakeFiles/Gtests.dir/clean
+
+# clean rule for target.
+clean: Google_tests/CMakeFiles/Gtests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

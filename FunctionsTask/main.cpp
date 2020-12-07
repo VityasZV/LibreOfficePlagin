@@ -11,10 +11,10 @@ int main() {
     vector<double> u{-1, 0, 1};
     auto factory = FuncFactory();
     auto a = factory.create("exp", -1.23);
-    auto b = factory.create("poly", v);
-    auto c = factory.create("poly", u);
+    auto b = factory.create("polynomial", v);
+    auto c = factory.create("polynomial", u);
 
-    cout << c -> ToString() << "     " << (*b).GetDerivativeAtPoint(2) << endl
-         << a -> ToString() << "     " << (*a).GetDerivativeAtPoint(1) << endl << (c / b) -> GetDerivativeAtPoint(0) << endl;
-    cout << getRoot(c, 10, 0.1, 100);
+    cout << c -> ToString() << "     " << (*c).GetDerivativeAtPoint(2) << endl
+         << a -> ToString() << "     " << (*a).GetDerivativeAtPoint(1) << endl << (c / a) -> GetDerivativeAtPoint(0) << endl;
+    cout << getRoot(c, 10, 0.1, 100) << std::endl;
 }
