@@ -22,7 +22,7 @@ private:
     template<class T>
     class Creator: public ICreator {
     public:
-        auto create(float coefficient) -> std::shared_ptr<BaseFunc> override {
+        auto create(double coefficient) -> std::shared_ptr<BaseFunc> override {
             return std::make_shared<T>(T(coefficient));
         }
 
@@ -31,7 +31,7 @@ private:
         }
 
         auto create(std::vector<double> coefficients) -> std::shared_ptr<BaseFunc>  override {
-            return make_shared<T>(T(coefficients));
+            return std::make_shared<T>(T(coefficients));
         }
     };
 

@@ -43,7 +43,7 @@ public:
 class ConstantFunc: public PolynomFunc {
 public:
     explicit ConstantFunc(double c) {
-        polynomialVector = {c}
+        polynomialVector = {c};
     }
 
     ConstantFunc() {
