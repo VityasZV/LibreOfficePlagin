@@ -1573,3 +1573,483 @@ make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMake
 
 Source file was:
 int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0dbe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f0dbe.dir/build.make CMakeFiles/cmTC_f0dbe.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f0dbe.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_f0dbe.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f0dbe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0dbe.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_f0dbe.dir/src.cxx.o  -o cmTC_f0dbe 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_130b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_130b6.dir/build.make CMakeFiles/cmTC_130b6.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_130b6.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_130b6.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_130b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_130b6.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_130b6.dir/src.cxx.o  -o cmTC_130b6 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8ea44/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ea44.dir/build.make CMakeFiles/cmTC_8ea44.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8ea44.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_8ea44.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8ea44
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ea44.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_8ea44.dir/src.cxx.o  -o cmTC_8ea44 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3db47/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3db47.dir/build.make CMakeFiles/cmTC_3db47.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3db47.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_3db47.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3db47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3db47.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_3db47.dir/src.cxx.o  -o cmTC_3db47 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f2b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f2b7.dir/build.make CMakeFiles/cmTC_5f2b7.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5f2b7.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_5f2b7.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5f2b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f2b7.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_5f2b7.dir/src.cxx.o  -o cmTC_5f2b7 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c9c7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7c9c7.dir/build.make CMakeFiles/cmTC_7c9c7.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7c9c7.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_7c9c7.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7c9c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c9c7.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_7c9c7.dir/src.cxx.o  -o cmTC_7c9c7 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e825e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e825e.dir/build.make CMakeFiles/cmTC_e825e.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e825e.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_e825e.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e825e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e825e.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_e825e.dir/src.cxx.o  -o cmTC_e825e 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4c43/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f4c43.dir/build.make CMakeFiles/cmTC_f4c43.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f4c43.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_f4c43.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f4c43
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4c43.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_f4c43.dir/src.cxx.o  -o cmTC_f4c43 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a79d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a79d6.dir/build.make CMakeFiles/cmTC_a79d6.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a79d6.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_a79d6.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a79d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a79d6.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_a79d6.dir/src.cxx.o  -o cmTC_a79d6 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7316/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7316.dir/build.make CMakeFiles/cmTC_e7316.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e7316.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_e7316.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e7316
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7316.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_e7316.dir/src.cxx.o  -o cmTC_e7316 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61527/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61527.dir/build.make CMakeFiles/cmTC_61527.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_61527.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_61527.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_61527
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61527.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_61527.dir/src.cxx.o  -o cmTC_61527 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e38a1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e38a1.dir/build.make CMakeFiles/cmTC_e38a1.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e38a1.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_e38a1.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e38a1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e38a1.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_e38a1.dir/src.cxx.o  -o cmTC_e38a1 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00c74/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00c74.dir/build.make CMakeFiles/cmTC_00c74.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_00c74.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_00c74.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_00c74
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00c74.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_00c74.dir/src.cxx.o  -o cmTC_00c74 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db747/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db747.dir/build.make CMakeFiles/cmTC_db747.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_db747.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_db747.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_db747
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db747.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_db747.dir/src.cxx.o  -o cmTC_db747 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_72c01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72c01.dir/build.make CMakeFiles/cmTC_72c01.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_72c01.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_72c01.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_72c01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c01.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_72c01.dir/src.cxx.o  -o cmTC_72c01 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0533e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0533e.dir/build.make CMakeFiles/cmTC_0533e.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0533e.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_0533e.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0533e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0533e.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_0533e.dir/src.cxx.o  -o cmTC_0533e 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c518/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c518.dir/build.make CMakeFiles/cmTC_4c518.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4c518.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_4c518.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4c518
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c518.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_4c518.dir/src.cxx.o  -o cmTC_4c518 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36f92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36f92.dir/build.make CMakeFiles/cmTC_36f92.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_36f92.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_36f92.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_36f92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36f92.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_36f92.dir/src.cxx.o  -o cmTC_36f92 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4369/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4369.dir/build.make CMakeFiles/cmTC_e4369.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e4369.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_e4369.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e4369
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4369.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_e4369.dir/src.cxx.o  -o cmTC_e4369 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e01d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e01d5.dir/build.make CMakeFiles/cmTC_e01d5.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e01d5.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_e01d5.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e01d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e01d5.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_e01d5.dir/src.cxx.o  -o cmTC_e01d5 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7db10/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7db10.dir/build.make CMakeFiles/cmTC_7db10.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7db10.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_7db10.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7db10
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7db10.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_7db10.dir/src.cxx.o  -o cmTC_7db10 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2d01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2d01.dir/build.make CMakeFiles/cmTC_a2d01.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a2d01.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_a2d01.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a2d01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2d01.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_a2d01.dir/src.cxx.o  -o cmTC_a2d01 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_edcba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_edcba.dir/build.make CMakeFiles/cmTC_edcba.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_edcba.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_edcba.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_edcba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edcba.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_edcba.dir/src.cxx.o  -o cmTC_edcba 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f45d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f45d.dir/build.make CMakeFiles/cmTC_5f45d.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5f45d.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_5f45d.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5f45d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f45d.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_5f45d.dir/src.cxx.o  -o cmTC_5f45d 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6d58b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d58b.dir/build.make CMakeFiles/cmTC_6d58b.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6d58b.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_6d58b.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6d58b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d58b.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_6d58b.dir/src.cxx.o  -o cmTC_6d58b 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_966ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_966ce.dir/build.make CMakeFiles/cmTC_966ce.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_966ce.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_966ce.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_966ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_966ce.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_966ce.dir/src.cxx.o  -o cmTC_966ce 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24b85/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24b85.dir/build.make CMakeFiles/cmTC_24b85.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_24b85.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_24b85.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_24b85
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24b85.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_24b85.dir/src.cxx.o  -o cmTC_24b85 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ec4b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ec4b6.dir/build.make CMakeFiles/cmTC_ec4b6.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ec4b6.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_ec4b6.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ec4b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec4b6.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_ec4b6.dir/src.cxx.o  -o cmTC_ec4b6 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e6e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e6e8.dir/build.make CMakeFiles/cmTC_3e6e8.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3e6e8.dir/src.cxx.o
+/usr/bin/c++    -Dflag_supported   -Wall -std=gnu++1z -o CMakeFiles/cmTC_3e6e8.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3e6e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e6e8.dir/link.txt --verbose=1
+/usr/bin/c++   -Dflag_supported    CMakeFiles/cmTC_3e6e8.dir/src.cxx.o  -o cmTC_3e6e8 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ca4fc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ca4fc.dir/build.make CMakeFiles/cmTC_ca4fc.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ca4fc.dir/src.cxx.o
+/usr/bin/c++    -Wall -Dflag_supported   -std=c++17 -std=gnu++1z -o CMakeFiles/cmTC_ca4fc.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ca4fc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca4fc.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -Dflag_supported    CMakeFiles/cmTC_ca4fc.dir/src.cxx.o  -o cmTC_ca4fc 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d7743/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d7743.dir/build.make CMakeFiles/cmTC_d7743.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d7743.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -Dflag_supported   -pthread -std=gnu++1z -o CMakeFiles/cmTC_d7743.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d7743
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7743.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -Dflag_supported    CMakeFiles/cmTC_d7743.dir/src.cxx.o  -o cmTC_d7743 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_10c8d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_10c8d.dir/build.make CMakeFiles/cmTC_10c8d.dir/build
+make[1]: Entering directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_10c8d.dir/src.cxx.o
+/usr/bin/c++    -Wall -std=c++17 -pthread -Dflag_supported   -O3 -std=gnu++1z -o CMakeFiles/cmTC_10c8d.dir/src.cxx.o -c /home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_10c8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10c8d.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -std=c++17 -pthread -Dflag_supported    CMakeFiles/cmTC_10c8d.dir/src.cxx.o  -o cmTC_10c8d 
+make[1]: Leaving directory '/home/parallels/WORK/ASVK4/FunctionsTask/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
