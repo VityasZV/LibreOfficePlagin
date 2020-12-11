@@ -14,7 +14,6 @@ int main() {
     auto b = factory.create("polynomial", v);
     auto c = factory.create("polynomial", u);
 
-    cout << c -> ToString() << "     " << (*c).GetDerivativeAtPoint(2) << endl
-         << a -> ToString() << "     " << (*a).GetDerivativeAtPoint(1) << endl << (c / a) -> GetDerivativeAtPoint(0) << endl;
-    cout << getRoot(c, 10, 0.1, 100) << std::endl;
+    cout << c -> ToString() << "     " << c->GetDerivativeAtPoint(2) << endl
+         << a -> ToString() << "     " << a->GetDerivativeAtPoint(1) << endl << (c / a) -> GetDerivativeAtPoint(0) << endl;
 }
