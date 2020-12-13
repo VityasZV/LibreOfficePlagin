@@ -137,6 +137,8 @@ ArithmeticFuncs/Div.h
 /home/parallels/WORK/ASVK4/FunctionsTask/Root.h
 Functions/BaseFunc.h
 /home/parallels/WORK/ASVK4/FunctionsTask/Functions/BaseFunc.h
+cmath
+-
 
 /home/parallels/WORK/ASVK4/FunctionsTask/main.cpp
 iostream

@@ -3,7 +3,7 @@
 #include "../Functions/FuncFactory.h"
 #include "../NewOperators.h"
 #include "../Root.h"
-
+#include <iostream>
 
 class ArithmeticTests : public ::testing::Test {
 public:
@@ -37,6 +37,8 @@ TEST_F(ArithmeticTests, ProdAndDivOnlyDerivatives) {
 }
 
 TEST_F(ArithmeticTests, GetRootTests) {
+    auto r = getRoot(a, 10, 0.1, 220);
+    std::cout << r << std::endl;
     EXPECT_NEAR(getRoot(a, 10, 0.1, 220), 1, 0.1);
     EXPECT_NEAR(getRoot(b, 10, 0.1, 250), 0, 0.1);
     EXPECT_NEAR(getRoot(c, 10, 0.1, 220), 0, 0.1);

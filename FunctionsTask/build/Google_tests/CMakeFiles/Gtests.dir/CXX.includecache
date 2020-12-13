@@ -129,6 +129,8 @@ gtest/gtest.h
 /home/parallels/WORK/ASVK4/FunctionsTask/NewOperators.h
 ../Root.h
 /home/parallels/WORK/ASVK4/FunctionsTask/Root.h
+iostream
+-
 
 /home/parallels/WORK/ASVK4/FunctionsTask/Google_tests/ExponentialTests.cpp
 gtest/gtest.h
@@ -167,4 +169,6 @@ ArithmeticFuncs/Div.h
 /home/parallels/WORK/ASVK4/FunctionsTask/Root.h
 Functions/BaseFunc.h
 /home/parallels/WORK/ASVK4/FunctionsTask/Functions/BaseFunc.h
+cmath
+-
 
