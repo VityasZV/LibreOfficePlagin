@@ -10,15 +10,15 @@
 #include "ArithmeticFuncs/Div.h"
 
 template<class A, class B,
-        std::enable_if_t<std::is_base_of_v<std::shared_ptr<BaseFunc>, A>, bool> = true,
-        std::enable_if_t<std::is_base_of_v<std::shared_ptr<BaseFunc>, B>, bool> = true>
+        std::enable_if_t<std::is_base_of_v<BaseFunc, std::remove_pointer_t<A>>, bool> = true,
+        std::enable_if_t<std::is_base_of_v<BaseFunc, std::remove_pointer<B>>, bool> = true>
 std::shared_ptr<BaseArithmetic> operator+(const A& first, const B& second) {
-    return std::make_shared<Sum>(Sum(*first, *second));
+    return std::make_shared<Sum>(Sum(*(first->copy()), *(second->copy())));
 }
 
 template<class A, class B,
-        std::enable_if_t<!std::is_base_of_v<std::shared_ptr<BaseFunc>, A> ||
-                !std::is_base_of_v<std::shared_ptr<BaseFunc>, B>, bool> = true>
+        std::enable_if_t<!std::is_base_of_v<BaseFunc, std::remove_pointer_t<A>> ||
+                !std::is_base_of_v<BaseFunc, std::remove_pointer_t<B>>, bool> = true>
 std::shared_ptr<BaseArithmetic> operator+(const A& first, const B& second) {
     std::ostringstream stream;
     stream << "Invalid operands for operator+.";

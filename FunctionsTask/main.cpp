@@ -29,6 +29,9 @@ int main() {
     auto d3 = factory.create("polynomial", t3);
     auto d4 = factory.create("power", t4);
     auto d5 = factory.create("polynomial", t5);
+   //  std::cout << std::is_base_of_v<BaseFunc, BaseArithmetic>;
+   //  d1+d2+d3;
+   //  return 0;
 
    std::cout <<  getRoot(d, 10, 0.1, 220) << std::endl;
    std::cout <<(d1 / d2) -> GetDerivativeAtPoint(1) << std::endl;
