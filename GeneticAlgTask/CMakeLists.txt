@@ -3,4 +3,4 @@ project(Genetic_Algorithm)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Genetic_Algorithm main.cpp)
+add_executable(Genetic_Algorithm main.cpp Genetic.cpp Cycle.cpp)

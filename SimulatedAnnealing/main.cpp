@@ -21,7 +21,7 @@ auto ParallelWork(size_t procs, std::vector<size_t> data, size_t cores, size_t s
 int main(int argc, char *argv[]) {
     try {
         srand(time(0));
-        std::cout << "Select a working temperature_mode (0 - serial, 1 - work_mode)" << std::endl;
+        std::cout << "selection a working temperature_mode (0 - serial, 1 - work_mode)" << std::endl;
         int int_work_mode, int_temperature_mode;
         std::cin >> int_work_mode;
         std::cout << "Choose a temperature mode (0 - Boltzman, 1 - Cauchy, 2 - Mixed)" << std::endl;
